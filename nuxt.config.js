@@ -14,7 +14,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'All Things Artifact' },
       { name: 'og:description', content:'a collection of Artifact news and articles' },
       { name: 'og:title', content:'All Things Artifact' },
-      { name: 'og:site_name', content:'Uptifact' }
+      { name: 'og:site_name', content:'Uptifact' },
+      { name: 'apple-mobile-web-app-title', content:'Uptifact' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
