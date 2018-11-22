@@ -12,7 +12,9 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'All Things Artifact' },
-      { name: 'og:description', content:'All Things Artifact' }
+      { name: 'og:description', content:'a collection of Artifact news and articles' },
+      { name: 'og:title', content:'All Things Artifact' },
+      { name: 'og:site_name', content:'Uptifact' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
