@@ -39,23 +39,32 @@
 
 
 export default {
-  async asyncData({ app }) {
-    const { articles } = await app.$axios.$get(
-      `http://localhost:3000/api/v1/${process.env.API_KEY}/articles`
-    )
-
-        function compare(a,b) {
-            if (a.publishedAt < b.publishedAt)
-                return -1;
-            if (a.publishedAt > b.publishedAt)
-                return 1;
-            return 0;
+    head() {
+        return {
+            titleTemplate: '%s | All Things Artifact',
+            mets: [
+                {name: 'description', content: 'All Things Artifact'},
+                {name: 'og:description', content:'All Things Artifact'},
+            ]
         }
+    },
+    async asyncData({ app }) {
+        const { articles } = await app.$axios.$get(
+            `http://localhost:3000/api/v1/${process.env.API_KEY}/articles`
+            )
 
-        let result = articles.sort(compare).reverse()
+                function compare(a,b) {
+                    if (a.publishedAt < b.publishedAt)
+                        return -1;
+                    if (a.publishedAt > b.publishedAt)
+                        return 1;
+                    return 0;
+                }
+
+                let result = articles.sort(compare).reverse()
 
 
-        return { result }
+                return { result }
     }
 }
 </script>
