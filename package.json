@@ -1,0 +1,28 @@
+{
+  "name": "upti",
+  "version": "1.0.0",
+  "description": "My first-rate Nuxt.js project",
+  "author": "Gonzalo Gutierrez",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/bulma": "^1.2.0",
+    "@nuxtjs/pwa": "^2.6.0",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.12",
+    "node-cron": "^2.0.3",
+    "nuxt": "^2.0.0",
+    "x-ray": "^2.3.3"
+  },
+  "devDependencies": {
+    "dotenv": "^6.1.0",
+    "nodemon": "^1.11.0"
+  }
+}
