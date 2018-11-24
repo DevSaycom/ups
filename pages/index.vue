@@ -1,9 +1,9 @@
 <template>
     <section class="section">
-        <div class="container">
+        <div class="container is-fluid">
             <div class="columns is-multiline">
                 <div
-                    class="column is-one-third"
+                    class="column is-one-quarter"
                     v-for="(article, index) in result"
                     :key="index">
                         <a :href="article.url" target="_blank">
