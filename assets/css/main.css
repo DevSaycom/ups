@@ -7,7 +7,7 @@ body {
 .card {
   text-decoration: none;
   color: #444;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -16,6 +16,33 @@ body {
   transition: all .1s ease-in;
 }
 .card:hover {
-  top: -2px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  top: -3px;
+  box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #463853;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.navbar-item.is-logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.is-storyworld{
+  margin: 0 auto;
+  max-width: 360px;
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  transition-duration: 172ms;
+  will-change: transform, box-shadow;
 }

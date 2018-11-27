@@ -1,24 +1,29 @@
 <template>
     <section class="section">
-        <div class="container is-fluid">
+        <div class="container">
             <div class="columns is-multiline">
                 <div
-                    class="column is-one-quarter"
+                    class="column is-5-tablet is-4-desktop is-3-fullhd"
                     v-for="(article, index) in result"
                     :key="index">
                         <a :href="article.url" target="_blank">
-                            <div class="card is-sady">
+                            <div class="card is-storyworld">
                                 <div class="card-image">
                                     <figure class="image is-3by2">
                                         <img :src="article.urlToImage" :alt="article.title">
                                     </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="content has-text-centered">
-                                        <strong class="tag is-danger">{{ article.source }}</strong>
-                                        <strong class="tag is-warning">{{ article.publishedAt2 }}</strong>
-                                        <h1 class="title is-family-sans-serif is-4 is-spaced has-text-grey has-text-centered has-text-weight-semi-bold">{{ article.title }}</h1>
+                                <div class="level">
+                                    <div class="level-right">
+                                        <div class="tags has-addons">
+                                            <div class="item-category tag has-text-danger">{{article.source}}</div>
+                                            <div class="item-category tag has-text-link">{{article.publishedAt2}}</div>
+                                        </div>
                                     </div>
+                                </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <div class="card-title">{{ article.title }}</div>
                                 </div>
                             </div>
                         </a>
